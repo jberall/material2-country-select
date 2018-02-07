@@ -109,7 +109,7 @@ export class Material2CountrySelectComponent implements OnInit, ControlValueAcce
  * Only English (en) and French (fr) are supported.
  * 
  * @param lang Optional 2 letter string defaults to 'en'
- * @returns {array} Country List
+ * @returns Country List Array
  */
 export function getCountryList(lang: string = 'en'):Object {
   let isoCountry: Object;
@@ -127,7 +127,7 @@ export function getCountryList(lang: string = 'en'):Object {
  * 
  * @param countryCode 2 letter string
  * @param lang Optional 2 letter string defaults to 'en'
- * @returns {string} Country Name
+ * @returns Country Name
  */
 export function getCountryName(countryCode:string = '', lang: string = 'en'):string {
   return (countryCode) ? getCountryList(lang)[countryCode] : '';
