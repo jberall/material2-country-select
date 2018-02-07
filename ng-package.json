@@ -3,7 +3,7 @@
   "lib": {
     "entryFile": "public_api.ts",
     "externals": {
-      "@angular/material": "ng.material"
+      "@angular/material/select": "ng.material.select"
     }
   }
 }
