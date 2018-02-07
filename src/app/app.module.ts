@@ -17,7 +17,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     MatInputModule,
     NoopAnimationsModule,
-    Material2CountrySelectModule
+    Material2CountrySelectModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

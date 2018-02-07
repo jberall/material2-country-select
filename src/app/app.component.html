@@ -3,11 +3,11 @@
     <mat-form-field class="example-full-width">
         <input matInput placeholder="Title" formControlName="title">
       </mat-form-field>    
-      <material2-country-select  class="example-form"
-      formControlName="country" (ngModelChange)="getName($event)"
-
+      <material2-country-select  class="example-form" 
+      formControlName="country" (ngModelChange)="getCountryName($event)"
+      [startCountries]="['CA','US']" 
           ></material2-country-select>      
 </form>
-<p>CountryName: {{countryName}}</p>
+<!-- <p>CountryName: {{countryName}}</p> -->
 <p>CountryName FN: {{getCountryName(form.value.country)}},{{getCountryName('US')}}</p>
 {{form.value | json}}

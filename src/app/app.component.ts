@@ -1,6 +1,7 @@
+import { FunctionsService } from './material2-country-select/services/functions.service';
 import { Component } from '@angular/core';
 import { FormGroup,FormBuilder } from '@angular/forms';
-import { getCountryName } from './material2-country-select/material2-country-select.component';
+
 
 @Component({
   selector: 'app-root',
@@ -11,17 +12,16 @@ export class AppComponent {
   title = 'form';
   countryName: string;
   form: FormGroup;
-  getCountryName = getCountryName
+
   
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder,private functionService: FunctionsService){
     this.form = fb.group({
       title: [],
       country: []
     });
   }
   
-  getName($event){
-    // console.log($event)
-    this.countryName = getCountryName($event)
+  getCountryName($event){
+    return this.functionService.getName($event);
   }
 }

@@ -1,4 +1,5 @@
-This is an Angular 5 Country DropDown List and getCountryName Function.
+This is an Angular 5 Country DropDown List and FunctionsService.
+    
 Currently supports english and french.
 
 This module will render a material2 select with a list of countries.
@@ -35,11 +36,16 @@ Options:
         [noValue]="false"
         ></material2-country-select>
         
-export function getCountryList(lang: string = 'en')
- returns array of country based on language.
-
-function getCountryName(countryCode:string = '', lang: string = 'en'):string
-returns a country name based on countryCode
-
-Declare the  getCountryName = getCountryName;
-In the html call the function. {{getCountryName(form.value.country)}}
+The FunctionsService has 2 functions:
+ /**
+   * 
+   * @param countryCode 2 letter string
+   * @param lang Optional 2 letter string defaults to 'en'
+   */
+  getName(countryCode: string = '', lang: string = 'en'): string
+  
+  /**
+   * 
+   * @param lang Optional 2 letter string defaults to 'en'
+   */
+  getList(lang: string = 'en'):Object
