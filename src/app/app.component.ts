@@ -11,6 +11,7 @@ import { FormGroup,FormBuilder } from '@angular/forms';
 export class AppComponent {
   title = 'form';
   countryName: string;
+  lang = 'fr';
   form: FormGroup;
 
   
@@ -22,6 +23,6 @@ export class AppComponent {
   }
   
   getCountryName($event){
-    return this.functionService.getName($event);
+    return this.functionService.getName($event,this.lang);
   }
 }

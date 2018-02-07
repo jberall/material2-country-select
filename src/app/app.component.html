@@ -4,6 +4,7 @@
         <input matInput placeholder="Title" formControlName="title">
       </mat-form-field>    
       <material2-country-select  class="example-form" 
+      lang="{{lang}}"
       formControlName="country" (ngModelChange)="getCountryName($event)"
       [startCountries]="['CA','US']" 
           ></material2-country-select>      

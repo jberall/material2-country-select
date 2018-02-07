@@ -17,7 +17,7 @@ export class FunctionsService {
    */
   getName(countryCode: string = '', lang: string = 'en'): string {
     lang = this.getLanguage(lang);
-    return (countryCode) ? this.getList(lang)[countryCode] : '';
+    return (countryCode) ? this.getList(lang)[countryCode.toUpperCase()] : '';
   }
   
 

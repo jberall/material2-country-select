@@ -1,6 +1,6 @@
 import { FunctionsService } from './services/functions.service';
 import { MatSelectModule } from '@angular/material';
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Material2CountrySelectComponent } from './material2-country-select.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,14 +8,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
-    MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
+    MatSelectModule    
   ],
   exports: [
     Material2CountrySelectComponent,
   ],
-  declarations: [Material2CountrySelectComponent]
+  declarations: [Material2CountrySelectComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 export class Material2CountrySelectModule { 
   

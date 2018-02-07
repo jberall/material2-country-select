@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Material2CountrySelectComponent } from './material2-country-select.component';
@@ -8,7 +9,8 @@ describe('Material2CountrySelectComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Material2CountrySelectComponent ]
+      declarations: [ Material2CountrySelectComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));
