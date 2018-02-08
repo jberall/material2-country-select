@@ -1,7 +1,9 @@
+import { FunctionsService } from './services/functions.service';
 import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Material2CountrySelectComponent } from './material2-country-select.component';
+import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('Material2CountrySelectComponent', () => {
   let component: Material2CountrySelectComponent;
@@ -10,7 +12,9 @@ describe('Material2CountrySelectComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ Material2CountrySelectComponent ],
-      imports: [FormsModule]
+      imports: [FormsModule],
+      providers: [FunctionsService],
+      schemas: [NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));

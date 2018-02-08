@@ -16,7 +16,7 @@ import { FunctionsService } from './services/functions.service';
   selector: 'material2-country-select',
   template: `
   <mat-form-field  class="{{class}}">
-  <mat-select [(ngModel)]="selectValue" placeholder="{{placeholder}}">
+  <mat-select [(ngModel)]="selectValue" placeholder="{{placeholder}}" ngDefaultControl>
       <mat-option *ngFor="let country of countries" [value]="country.code">
           {{country.country}}
       </mat-option>
