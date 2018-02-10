@@ -9,6 +9,7 @@ describe('Material2CountrySelectComponent', () => {
   let component: Material2CountrySelectComponent;
   let fixture: ComponentFixture<Material2CountrySelectComponent>;
 
+ 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ Material2CountrySelectComponent ],
@@ -28,4 +29,9 @@ describe('Material2CountrySelectComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  fit ('should correctly render the basic select',() =>{
+    //their should be default Country value.
+    expect(fixture.debugElement.nativeElement.innerHtml).toBe('');
+  })
 });
