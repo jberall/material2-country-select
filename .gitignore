@@ -6,6 +6,7 @@
 /tmp
 /out-tsc
 /.ng_pkg_build
+/langs
 
 # dependencies
 /node_modules

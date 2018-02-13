@@ -28,7 +28,8 @@ import { FunctionsService } from './services/functions.service';
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => Material2CountrySelectComponent),
       multi: true,
-    }
+    },
+    FunctionsService
   ],
 })
 export class Material2CountrySelectComponent implements OnInit, ControlValueAccessor {

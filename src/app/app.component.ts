@@ -11,14 +11,16 @@ import { FormGroup,FormBuilder } from '@angular/forms';
 export class AppComponent {
   title = 'form';
   countryName: string;
-  lang = 'fr';
+  lang = 'en';
+  startCountries = ['CA','US']
+  limitCountries = []
   form: FormGroup;
 
   
   constructor(private fb: FormBuilder,private functionService: FunctionsService){
     this.form = fb.group({
       title: [],
-      country: []
+      country: ['CA']
     });
   }
   

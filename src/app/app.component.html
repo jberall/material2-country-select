@@ -5,10 +5,10 @@
       </mat-form-field>    
       <material2-country-select  class="example-form" 
       lang="{{lang}}"
-      formControlName="country" (ngModelChange)="getCountryName($event)"
-      [startCountries]="['CA','US']" 
-      placeholder="something"
-      
+      formControlName="country" 
+      (ngModelChange)="getCountryName($event)"
+      [startCountries]="startCountries" 
+      [limitCountries]="limitCountries"
           ></material2-country-select>      
 </form>
 <!-- <p>CountryName: {{countryName}}</p> -->
